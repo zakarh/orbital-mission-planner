@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+backend/cache/
+backend/*.log
+
+# C++ build artifacts
+core/build/
+*.so
+*.pyd
+*.obj
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Misc
+srv.err
+srv.out

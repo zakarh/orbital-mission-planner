@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbital Mission Planner</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="canvas-container"></div>
+
+  <header id="topbar">
+    <h1>🛰 Orbital Mission Planner</h1>
+    <div class="controls">
+      <label>Group
+        <select id="group-select"></select>
+      </label>
+      <span id="status" class="status">loading…</span>
+    </div>
+  </header>
+
+  <aside id="sidebar">
+    <section class="panel">
+      <h2>Selected satellite</h2>
+      <div id="sat-info" class="muted">Click a satellite to inspect its orbit.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Hohmann transfer planner</h2>
+      <div class="field">
+        <label>Departure altitude (km)
+          <input type="number" id="alt1" value="400" />
+        </label>
+        <label>Arrival altitude (km)
+          <input type="number" id="alt2" value="35786" />
+        </label>
+      </div>
+      <button id="plan-transfer">Plan &amp; visualize burn</button>
+      <div id="transfer-result" class="muted"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Conjunction screening</h2>
+      <div class="field">
+        <label>Threshold (km)
+          <input type="number" id="conj-threshold" value="10" />
+        </label>
+        <label>Window (min)
+          <input type="number" id="conj-window" value="180" />
+        </label>
+      </div>
+      <button id="run-conjunctions">Screen group</button>
+      <div id="conj-result" class="muted"></div>
+    </section>
+
+    <section class="panel legend">
+      <span><i class="dot sat"></i> satellite</span>
+      <span><i class="dot orbit"></i> selected orbit</span>
+      <span><i class="dot transfer"></i> transfer</span>
+    </section>
+  </aside>
+
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
