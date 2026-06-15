@@ -4,7 +4,9 @@
 satellites from live TLE data, screens for close approaches, and plans orbital
 transfers — built on a C++ orbital-mechanics core.
 
-![stack](https://img.shields.io/badge/core-C%2B%2B17-blue) ![py](https://img.shields.io/badge/api-Flask-green) ![fe](https://img.shields.io/badge/3D-Three.js-orange)
+Demo Video: https://youtu.be/FHj7BJldIsE
+
+![screenshot](./doc/screenshot.png)
 
 ## What it does
 
