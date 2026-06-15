@@ -6,7 +6,7 @@ transfers — built on a C++ orbital-mechanics core.
 
 Demo Video: https://youtu.be/FHj7BJldIsE
 
-![screenshot](./doc/screenshot.png)
+![screenshot](./docs/screenshot.png)
 
 ## What it does
 
